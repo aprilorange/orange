@@ -1,4 +1,5 @@
 @import 'mixins'
+$color = rgb(255, 75, 1)
 
 body
   font 14px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif
@@ -16,8 +17,8 @@ body,h1,h2,h3,h4,h5
   
 .orangejuice
   background-image url('https://ooo.0o0.ooo/2015/08/28/55df3fe9e7524.png')
-  width 400px
-  height 300px
+  width 360px
+  height 270px
   background-size cover
   display inline-block
   
@@ -27,17 +28,47 @@ body,h1,h2,h3,h4,h5
   position relative
   text-align center
   text-shadow 0px 1px rgba(255, 255, 255, 0.53)
-  color #FF2D0A
+  color $color
+  .container 
+    max-width 640px
   a
-    color #FF2D0A
+    color $color
     text-decoration none
     border-bottom 1px dotted @color
     &:hover
       background-color #F90
+  .circle-wrapper
+    position relative
+    overflow hidden
+    top -50px
+    .circle,.circle-inner
+      width 50px
+      height @width
+      background-color white
+      border-radius 50%
+      position absolute
+      left 50%
+      bottom -25px
+      margin-left -25px
+      z-index 1
+      box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.26)
+      position relative
+    .circle-inner
+      width 30px
+      height @width
+      bottom -10px
+      margin-left -15px
+      background-color #FFC654
   .intro
+    top -50px
+    position relative
     font-size 22px
     display inline-block
     text-align left
+    background-color white
+    border-radius 4px
+    box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.26)
+    padding 10px 20px
     p
       margin 0 0 15px 0
       &:last-child
