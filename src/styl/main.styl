@@ -24,11 +24,12 @@ body,h1,h2,h3,h4,h5
   
 .s1
   background-color #FFC654
-  min-height 100vmin
+  height 100vmin
   position relative
   text-align center
   text-shadow 0px 1px rgba(255, 255, 255, 0.53)
   color $color
+  overflow hidden
   .container 
     max-width 640px
   a
@@ -39,31 +40,33 @@ body,h1,h2,h3,h4,h5
       background-color #F90
   .circle-wrapper
     position relative
-    overflow hidden
     top -50px
     .circle,.circle-inner
-      width 50px
+      width 70px
       height @width
       background-color white
       border-radius 50%
       position absolute
       left 50%
-      bottom -25px
-      margin-left -25px
+      bottom -35px
+      margin-left -35px
       z-index 1
       box-shadow 0px 2px 5px 0px rgba(0, 0, 0, 0.26)
       position relative
     .circle-inner
-      width 30px
+      width 60px
       height @width
-      bottom -10px
-      margin-left -15px
+      bottom -5px
+      margin-left -30px
       background-color #FFC654
+      background-image url('http://tp3.sinaimg.cn/1647101210/180/5735665051/0')
+      background-size cover
+      box-shadow 0px 0px 1px #778087
   .intro
-    top -50px
     position relative
     font-size 22px
     display inline-block
+    min-height 100vmin
     text-align left
     background-color white
     border-radius 4px
