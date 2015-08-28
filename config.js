@@ -1,3 +1,4 @@
 module.exports = {
-  title: 'April Orange'
+  title: 'April Orange',
+  github: 'https://github.com/aprilorange/'
 }
