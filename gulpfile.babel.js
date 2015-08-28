@@ -40,11 +40,19 @@ gulp.task('stylus', ['rm-css'], () => {
     .pipe(gulp.dest('./build/css'))
 })
 
-gulp.task('build', ['jade', 'stylus'])
+gulp.task('babel', () => {
+  return gulp.src('./src/js/app.js')
+    .pipe(babel())
+    .pipe(rename('app-' + id + '.js'))
+    .pipe(gulp.dest('./build/js'))
+})
+
+gulp.task('build', ['jade', 'stylus', 'babel'])
 
 gulp.task('watch', () => {
   gulp.watch('./src/jade/*.jade', ['jade'])
   gulp.watch('./src/styl/*.styl', ['stylus'])
+  gulp.watch('./src/js/*.js', ['babel'])
 })
 
 gulp.task('default', ['build', 'watch', 'serve'])
